@@ -1,0 +1,41 @@
+<idea-plugin version="2">
+  <id>yu_bing</id>
+  <name>Code Statistics</name>
+  <version>1.0</version>
+  <vendor>YuBing</vendor>
+
+  <description>用于统计工程中的代码行数</description>
+
+  <change-notes>
+  </change-notes>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <action id="CodeAnalyse" class="com.code.analyse.AnalyseAction"
+            text="代码统计">
+      <add-to-group group-id="HelpMenu" anchor="first"/>
+      <keyboard-shortcut first-keystroke="control meta T" keymap="$default"/>
+    </action>
+  </actions>
+
+</idea-plugin>
